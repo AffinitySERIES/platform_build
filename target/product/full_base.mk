@@ -21,13 +21,7 @@
 
 PRODUCT_PACKAGES := \
     libfwdlockengine \
-    OpenWnn \
-    PinyinIME \
-    libWnnEngDic \
-    libWnnJpnDic \
-    libwnndict \
-    VideoEditor \
-    WAPPushManager
+    VideoEditor 
 
 PRODUCT_PACKAGES += \
     Galaxy4 \
