@@ -22,7 +22,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.config.notification_sound=OnTheHunt.ogg \
     ro.config.alarm_alert=Alarm_Classic.ogg
 
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES := \
     ApplicationsProvider \
     BackupRestoreConfirmation \
     BasicDreams \
@@ -38,7 +38,6 @@ PRODUCT_PACKAGES += \
     MediaProvider \
     PackageInstaller \
     PhotoTable \
-    PicoTts \
     SettingsProvider \
     SharedStorageBackup \
     TelephonyProvider \
@@ -152,20 +151,5 @@ ifeq ($(WITH_HOST_DALVIK),true)
         libjavacore \
         libssl \
         libz-host \
-        dalvik \
-        zoneinfo-host.dat \
-        zoneinfo-host.idx \
-        zoneinfo-host.version
+        dalvik
 endif
-
-ifeq ($(HAVE_SELINUX),true)
-    PRODUCT_PACKAGES += \
-        sepolicy \
-        file_contexts \
-        seapp_contexts \
-        property_contexts \
-        mac_permissions.xml
-endif
-
-$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
-
